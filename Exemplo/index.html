@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Prático: Posicionamento no CSS (Aula 11)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. STICKY: Barra de navegação que gruda no topo -->
+  <header class="barra-navegacao">
+    Minha Loja Web (position: sticky)
+  </header>
+
+  <main class="conteudo-principal">
+
+    <section class="caixa-texto">
+      <h2>Bem-vindo à Aula de Posicionamento CSS!</h2>
+      <p>
+        Role esta página para baixo para observar o comportamento visual de cada uma das propriedades: 
+        <strong>sticky</strong>, <strong>relative</strong>, <strong>absolute</strong>, <strong>fixed</strong> e as camadas com <strong>z-index</strong>.
+      </p>
+    </section>
+
+    <!-- 2 e 3. PAI RELATIVE + FILHO ABSOLUTE -->
+    <article class="card-produto">
+      <span class="etiqueta-destaque">PROMOÇÃO (absolute)</span>
+      <h3>Fone de Ouvido Bluetooth (position: relative)</h3>
+      <p>
+        Este card possui <code>position: relative</code>, servindo de âncora para a etiqueta "PROMOÇÃO" que tem <code>position: absolute</code>. 
+        Se o card não fosse relativo, a etiqueta iria parar no topo da janela do navegador!
+      </p>
+    </article>
+
+    <!-- 4. RELATIVE COM DESLOCAMENTO -->
+    <div class="aviso-deslocado">
+      📌 <strong>Aviso (position: relative):</strong> Este bloco foi empurrado 10px para baixo e 15px para a direita a partir do seu lugar original!
+    </div>
+
+    <!-- Espaçadores para criar barra de rolagem -->
+    <section class="espacador-scroll">
+      <p>↓ Role mais a página para testar o efeito do Sticky no topo e do Fixed no canto inferior ↓</p>
+    </section>
+
+    <section class="caixa-texto">
+      <h2>O que é o z-index?</h2>
+      <p>Define a ordem das camadas de profundidade:</p>
+      <br>
+      <p>• O card comum fica na camada base.</p>
+      <p>• A etiqueta de promoção usa <code>z-index: 10</code> para cobrir a borda do card.</p>
+      <p>• A barra do topo usa <code>z-index: 100</code> para passar por cima do card ao rolar.</p>
+      <p>• O botão do WhatsApp usa <code>z-index: 999</code> para ficar sempre visível acima de tudo!</p>
+    </section>
+
+    <section class="espacador-scroll">
+      <p>Fim da página de demonstração.</p>
+    </section>
+
+  </main>
+
+  <!-- 5. FIXED: Botão do WhatsApp fixado na janela -->
+  <a href="#" class="botao-whatsapp">
+    💬 Fale Conosco (fixed)
+  </a>
+
+</body>
+</html>
